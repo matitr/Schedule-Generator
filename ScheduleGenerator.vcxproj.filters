@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ClassComponents">
+      <UniqueIdentifier>{e75330b1-6a0b-4444-829c-849ebc6b19be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GeneticAlgorithm">
+      <UniqueIdentifier>{fc9d8aa3-eb52-4e5a-be11-35eb92800d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{cc3e1d3a-9a12-4d22-b065-433c16b1bd41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SeparateSchedule">
+      <UniqueIdentifier>{b556c371-f17b-4662-8c07-054ee019e1dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{947e434b-221c-4bd0-ae9f-17a2a1e3804f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowSources">
+      <UniqueIdentifier>{8ff6aa09-3f69-49df-a9e5-1038669fafe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Teacher.cpp">
+      <Filter>ClassComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Subject.cpp">
+      <Filter>ClassComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>ClassComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseClass.cpp">
+      <Filter>ClassComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Course.cpp">
+      <Filter>ClassComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesTime.cpp">
+      <Filter>GeneticAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Population.cpp">
+      <Filter>GeneticAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="SeparateSchedule.cpp">
+      <Filter>SeparateSchedule</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>SeparateSchedule</Filter>
+    </ClCompile>
+    <ClCompile Include="InOut.cpp">
+      <Filter>SeparateSchedule</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>ClassComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Chromosome.cpp">
+      <Filter>GeneticAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_ConfigWindow.cpp">
+      <Filter>WindowSources</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_MainWindow.cpp">
+      <Filter>WindowSources</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigWindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_ConfigWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_LineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_LineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineEdit.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Course.h">
+      <Filter>ClassComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CourseClass.h">
+      <Filter>ClassComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>ClassComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Subject.h">
+      <Filter>ClassComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Teacher.h">
+      <Filter>ClassComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Population.h">
+      <Filter>GeneticAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassesTime.h">
+      <Filter>GeneticAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="SeparateSchedule.h">
+      <Filter>SeparateSchedule</Filter>
+    </ClInclude>
+    <ClInclude Include="InOut.h">
+      <Filter>SeparateSchedule</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>SeparateSchedule</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>ClassComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Chromosome.h">
+      <Filter>GeneticAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="MainWindow.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>WindowSources</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_configwindow.h">
+      <Filter>WindowSources</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="config.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="mainwindow.ui">
+      <Filter>Window</Filter>
+    </CustomBuild>
+    <CustomBuild Include="configwindow.ui">
+      <Filter>Window</Filter>
+    </CustomBuild>
+    <CustomBuild Include="moc_predefs.h.cbt">
+      <Filter>WindowSources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ConfigWindow.h">
+      <Filter>Window</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LineEdit.h">
+      <Filter>Window</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
