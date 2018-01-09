@@ -87,7 +87,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;Qt\include;Qt\include\QtWidgets;Qt\include\QtGui;Qt\include\QtANGLE;Qt\include\QtCore;debug;.;Qt\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ClassComponents;Configuration;GeneticAlgorithm;SeparateSchedule;.;Qt\include;Qt\include\QtWidgets;Qt\include\QtGui;Qt\include\QtANGLE;Qt\include\QtCore;debug;.;Qt\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\Schedule;.;Qt\include;Qt\include\QtWidgets;Qt\include\QtGui;Qt\include\QtANGLE;Qt\include\QtCore;release;.;Qt\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ClassComponents;Configuration;GeneticAlgorithm;SeparateSchedule;..\Schedule;.;Qt\include;Qt\include\QtWidgets;Qt\include\QtGui;Qt\include\QtANGLE;Qt\include\QtCore;release;.;Qt\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -186,42 +186,41 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Chromosome.cpp" />
-    <ClCompile Include="ClassesTime.cpp" />
-    <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="ClassComponents\Course.cpp" />
+    <ClCompile Include="ClassComponents\CourseClass.cpp" />
+    <ClCompile Include="ClassComponents\Group.cpp" />
+    <ClCompile Include="ClassComponents\Room.cpp" />
+    <ClCompile Include="ClassComponents\Subject.cpp" />
+    <ClCompile Include="ClassComponents\Teacher.cpp" />
+    <ClCompile Include="Configuration\Configuration.cpp" />
+    <ClCompile Include="Configuration\Settings.cpp" />
     <ClCompile Include="ConfigWindow.cpp" />
-    <ClCompile Include="Course.cpp" />
+    <ClCompile Include="GeneticAlgorithm\Chromosome.cpp" />
+    <ClCompile Include="GeneticAlgorithm\ClassesTime.cpp" />
+    <ClCompile Include="GeneticAlgorithm\Population.cpp" />
     <ClCompile Include="LineEdit.cpp" />
     <ClCompile Include="MainWindow.cpp" />
-    <ClCompile Include="Subject.cpp" />
-    <ClCompile Include="CourseClass.cpp" />
-    <ClCompile Include="Group.cpp" />
-    <ClCompile Include="InOut.cpp" />
-    <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Population.cpp" />
-    <ClCompile Include="Room.cpp" />
-    <ClCompile Include="SeparateSchedule.cpp" />
-    <ClCompile Include="Settings.cpp" />
-    <ClCompile Include="Teacher.cpp" />
+    <ClCompile Include="SeparateSchedule\InOut.cpp" />
+    <ClCompile Include="SeparateSchedule\List.cpp" />
+    <ClCompile Include="SeparateSchedule\SeparateSchedule.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Chromosome.h" />
-    <ClInclude Include="ClassesTime.h" />
-    <ClInclude Include="Configuration.h" />
-    <ClInclude Include="Course.h" />
+    <ClInclude Include="ClassComponents\Course.h" />
+    <ClInclude Include="ClassComponents\CourseClass.h" />
+    <ClInclude Include="ClassComponents\Group.h" />
+    <ClInclude Include="ClassComponents\Room.h" />
+    <ClInclude Include="ClassComponents\Subject.h" />
+    <ClInclude Include="ClassComponents\Teacher.h" />
+    <ClInclude Include="Configuration\Configuration.h" />
+    <ClInclude Include="Configuration\Settings.h" />
+    <ClInclude Include="GeneticAlgorithm\Chromosome.h" />
+    <ClInclude Include="GeneticAlgorithm\ClassesTime.h" />
+    <ClInclude Include="GeneticAlgorithm\Population.h" />
     <ClInclude Include="MainWindow.h" />
-    <ClInclude Include="Subject.h" />
-    <ClInclude Include="CourseClass.h" />
-    <ClInclude Include="Group.h" />
-    <ClInclude Include="InOut.h" />
-    <ClInclude Include="List.h" />
-    <ClInclude Include="Population.h" />
-    <ClInclude Include="Room.h" />
-    <ClInclude Include="SeparateSchedule.h" />
-    <ClInclude Include="Settings.h" />
-    <ClInclude Include="Teacher.h" />
-    <ClInclude Include="ui_mainwindow.h" />
+    <ClInclude Include="SeparateSchedule\InOut.h" />
+    <ClInclude Include="SeparateSchedule\List.h" />
+    <ClInclude Include="SeparateSchedule\SeparateSchedule.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="config.txt" />
@@ -237,16 +236,6 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Qt\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include Release/moc_predefs.h -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt" ConfigWindow.h -o release\moc_ConfigWindow.cpp</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ConfigWindow.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\moc_ConfigWindow.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="MainWindow.h">
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MainWindow.h;Debug\moc_predefs.h;Qt\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Qt\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include Debug/moc_predefs.h -I"M:\Program Files\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.25017\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt" MainWindow.h -o debug\moc_MainWindow.cpp</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC MainWindow.h</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\moc_MainWindow.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MainWindow.h;Release\moc_predefs.h;Qt\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Qt\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include Release/moc_predefs.h -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.14393.0\winrt" MainWindow.h -o release\moc_MainWindow.cpp</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC MainWindow.h</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\moc_MainWindow.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="LineEdit.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LineEdit.h;Debug\moc_predefs.h;Qt\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
@@ -287,7 +276,6 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>
-    <ClInclude Include="ui_mainwindow.h" />
     <CustomBuild Include="mainwindow.ui">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mainwindow.ui;Qt\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
